@@ -7,12 +7,12 @@
 //
 
 #include <iostream>
+#include "OculusApp.h"
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    OculusApp app;
+    app.run();
     return 0;
 }
 
