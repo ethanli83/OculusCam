@@ -80,8 +80,8 @@ void OculusAppBase::startup() {
     setupRenderProgram();
     setupRenderTargetBuffer();
 
-//    leftCam.startCapture();
-//    rightCam.startCapture();
+    leftCam.startCapture();
+    rightCam.startCapture();
 }
 
 void OculusAppBase::setupRenderProgram() {
@@ -169,12 +169,11 @@ void OculusAppBase::renderOculusView(double currentTime) {
 }
 
 void OculusAppBase::renderStereo(double time, StereoEyeParams const params) {
-    //glBindFramebuffer(GL_FRAMEBUFFER, renderTargetBuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, renderTargetBuffer);
     renderScene(time, params);
-    //renderScreen(time, params);
+    renderScreen(time, params);
 }
 
-double lastLeftCamReadTime, lastRightCamReadTime;
 void OculusAppBase::renderScreen(double time, StereoEyeParams const params) {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
@@ -221,19 +220,13 @@ void OculusAppBase::renderScreen(double time, StereoEyeParams const params) {
     glUniformMatrix4fv(posMatrixLoc, 1, GL_FALSE, glm::value_ptr(posMatrix));
     glUniformMatrix4fv(texMatrixLoc, 1, GL_FALSE, glm::value_ptr(texMatrix));
 
-//    if (params.Eye == StereoEye_Left) {
-//        if (time - lastLeftCamReadTime > 33 / 1000) {
-//            loadCamImageToTex(leftCam, leftEyeCamTex);
-//            lastLeftCamReadTime = time;
-//        }
-//        glBindTexture(GL_TEXTURE_2D, leftEyeCamTex);
-//    } else {
-//        if (time - lastRightCamReadTime > 33 / 1000) {
-//            loadCamImageToTex(rightCam, rightEyeCamTex);
-//            lastLeftCamReadTime = time;
-//        }
-//        glBindTexture(GL_TEXTURE_2D, rightEyeCamTex);
-//    }
+    if (params.Eye == StereoEye_Left) {
+        loadCamImageToTex(leftCam, leftEyeCamTex);
+        glBindTexture(GL_TEXTURE_2D, leftEyeCamTex);
+    } else {
+        loadCamImageToTex(rightCam, rightEyeCamTex);
+        glBindTexture(GL_TEXTURE_2D, rightEyeCamTex);
+    }
 
     glDrawArrays(GL_TRIANGLES, 0, 6);
 

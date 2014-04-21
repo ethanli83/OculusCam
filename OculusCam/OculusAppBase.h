@@ -54,7 +54,7 @@ protected:
 
 class OculusAppBase : protected OculusBase, public MessageHandler {
 protected:
-    OculusAppBase() : eyePosition(0.0f, 1.6f, -5.0f), eyeYaw(YawInitial), eyePitch(0), eyeRoll(0), stereoConfig(), leftCam(2), rightCam(0) {
+    OculusAppBase() : eyePosition(0.0f, 1.6f, -5.0f), eyeYaw(YawInitial), eyePitch(0), eyeRoll(0), stereoConfig(), leftCam(0), rightCam(0) {
     }
 
     ~OculusAppBase() {
