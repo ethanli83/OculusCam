@@ -6,12 +6,17 @@
 //  Copyright (c) 2014 Ethan.Li. All rights reserved.
 //
 
-#include <iostream>
 #include "OculusApp.h"
+#include "CubesApp.h"
 
 int main(int argc, const char * argv[])
 {
-    OculusApp app;
+//    OculusApp::systemInit();
+//    OculusApp app;
+//    app.run();
+
+    CubesApp::systemInit();
+    CubesApp app;
     app.run();
     return 0;
 }

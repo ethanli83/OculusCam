@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAAED308F66E26ED5D9E8E52 /* OculusAppBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAED3BAB6D8117682032DF8 /* OculusAppBase.cpp */; };
-		AAAED94F310FB77A440797B7 /* OculusApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDD4215C5CAAD6F4403F1 /* OculusApp.cpp */; };
-		AAAEDAE2CF1ABCDA30F33AA6 /* OpenGLApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDBBCF8715FFCE130F38E /* OpenGLApp.cpp */; };
-		BED24AE719050CD70009D365 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BED24AE619050CD70009D365 /* main.cpp */; };
+		AAAED211179631B98B719EC6 /* RenderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDD84A787024B8A5B41EC /* RenderProgram.cpp */; };
+		AAAED6BF4E042E4B240E22E2 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDD9F6149125E907464EB /* Scene.cpp */; };
+		AAAED733771827BC6A55B235 /* CubesSceneEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDAFEACAED94EA85B01E7 /* CubesSceneEngine.cpp */; };
+		AAAED77ECC8846DEE633D6B5 /* SceneEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAED544D20FEC97C16D2101 /* SceneEngine.cpp */; };
+		AAAED7D56EF284B3B66A4527 /* OpenGLApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDF52FAFC4D7FEFA1B005 /* OpenGLApp.cpp */; };
+		AAAEDC814B05AB08BF12EF1D /* CubesApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDAC7413A6FEC19D9A0B1 /* CubesApp.cpp */; };
+		AAAEDCE23B3BCD54C6A7AE06 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDEFF009AE2864EB89D37 /* Camera.cpp */; };
+		AAAEDD8C2E7F0A8772157536 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAED1AA3E322724C0864C6F /* main.cpp */; };
+		AAAEDF1D9016C73E0E5C1AF8 /* BaseRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAED8E757BF4CBD37EBF15E /* BaseRenderer.cpp */; };
+		AAAEDF76665ECB809BD9F7FB /* OculusRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAEDF23FC6AD9D646F9F01E /* OculusRenderer.cpp */; };
+		AAAEDFAF04EA3D3334DBDB2D /* SceneObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAAED783B0FB31DADAD679CC /* SceneObject.cpp */; };
 		BED24AF119050F9A0009D365 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED24AF019050F9A0009D365 /* Cocoa.framework */; };
 		BED24AF319050FA30009D365 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED24AF219050FA30009D365 /* OpenGL.framework */; };
 		BED24AF5190510AE0009D365 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED24AF4190510AE0009D365 /* IOKit.framework */; };
@@ -37,16 +44,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AAAED1C5EE4BC5551576F6ED /* OpenGLApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLApp.h; sourceTree = "<group>"; };
-		AAAED2B0C2A80172E3FF105D /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
-		AAAED370D35C19B92A401491 /* OculusAppBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OculusAppBase.h; sourceTree = "<group>"; };
-		AAAED3BAB6D8117682032DF8 /* OculusAppBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OculusAppBase.cpp; sourceTree = "<group>"; };
-		AAAED5F38B8754CE489047D7 /* WebCam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCam.h; sourceTree = "<group>"; };
-		AAAEDBBCF8715FFCE130F38E /* OpenGLApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLApp.cpp; sourceTree = "<group>"; };
-		AAAEDD4215C5CAAD6F4403F1 /* OculusApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OculusApp.cpp; sourceTree = "<group>"; };
-		AAAEDF0794B0983C62B03722 /* OculusApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OculusApp.h; sourceTree = "<group>"; };
+		AAAED1AA3E322724C0864C6F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AAAED25C3F3CF72AB3A20FDE /* OculusRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OculusRenderer.h; sourceTree = "<group>"; };
+		AAAED32361CCF58E52BB52F7 /* WebCam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebCam.h; sourceTree = "<group>"; };
+		AAAED3B28E9C7E26426E9839 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		AAAED42187C1068260B58E6D /* RenderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderProgram.h; sourceTree = "<group>"; };
+		AAAED48CF955AC1F88EB5BAE /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		AAAED544D20FEC97C16D2101 /* SceneEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneEngine.cpp; sourceTree = "<group>"; };
+		AAAED783B0FB31DADAD679CC /* SceneObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneObject.cpp; sourceTree = "<group>"; };
+		AAAED8E757BF4CBD37EBF15E /* BaseRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseRenderer.cpp; sourceTree = "<group>"; };
+		AAAED946A37BF88402F157A5 /* SceneEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneEngine.h; sourceTree = "<group>"; };
+		AAAEDAC7413A6FEC19D9A0B1 /* CubesApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubesApp.cpp; sourceTree = "<group>"; };
+		AAAEDAE179C18FA6CD06E60E /* BaseRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRenderer.h; sourceTree = "<group>"; };
+		AAAEDAFEACAED94EA85B01E7 /* CubesSceneEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubesSceneEngine.cpp; sourceTree = "<group>"; };
+		AAAEDB3444D5DBC18C3BCF72 /* CubesApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubesApp.h; sourceTree = "<group>"; };
+		AAAEDBCD0B115A53009F1399 /* SceneObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneObject.h; sourceTree = "<group>"; };
+		AAAEDBD1C8F67C380E3356CF /* OpenGLApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLApp.h; sourceTree = "<group>"; };
+		AAAEDD84A787024B8A5B41EC /* RenderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderProgram.cpp; sourceTree = "<group>"; };
+		AAAEDD9F6149125E907464EB /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		AAAEDE6E7A3C06882E858247 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
+		AAAEDEAFC7197552761ED63F /* CubesSceneEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubesSceneEngine.h; sourceTree = "<group>"; };
+		AAAEDEFF009AE2864EB89D37 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		AAAEDF23FC6AD9D646F9F01E /* OculusRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OculusRenderer.cpp; sourceTree = "<group>"; };
+		AAAEDF52FAFC4D7FEFA1B005 /* OpenGLApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLApp.cpp; sourceTree = "<group>"; };
 		BED24AE319050CD70009D365 /* OculusCam */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OculusCam; sourceTree = BUILT_PRODUCTS_DIR; };
-		BED24AE619050CD70009D365 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BED24AF019050F9A0009D365 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BED24AF219050FA30009D365 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		BED24AF4190510AE0009D365 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -70,13 +91,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAAED00E44E13FEC4063CCE5 /* AppBasic */ = {
+			isa = PBXGroup;
+			children = (
+				AAAEDF52FAFC4D7FEFA1B005 /* OpenGLApp.cpp */,
+				AAAEDBD1C8F67C380E3356CF /* OpenGLApp.h */,
+				AAAEDE6E7A3C06882E858247 /* AppHelper.h */,
+			);
+			path = AppBasic;
+			sourceTree = "<group>";
+		};
+		AAAED1175374FF49D5AE0D8F /* OculusCam */ = {
+			isa = PBXGroup;
+			children = (
+				AAAED1AA3E322724C0864C6F /* main.cpp */,
+				AAAED53CAF5229F4586D0FE7 /* Rendering */,
+				AAAEDAC7413A6FEC19D9A0B1 /* CubesApp.cpp */,
+				AAAEDB3444D5DBC18C3BCF72 /* CubesApp.h */,
+				AAAEDAFEACAED94EA85B01E7 /* CubesSceneEngine.cpp */,
+				AAAEDEAFC7197552761ED63F /* CubesSceneEngine.h */,
+				AAAED00E44E13FEC4063CCE5 /* AppBasic */,
+			);
+			path = OculusCam;
+			sourceTree = "<group>";
+		};
+		AAAED53CAF5229F4586D0FE7 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				AAAED8E757BF4CBD37EBF15E /* BaseRenderer.cpp */,
+				AAAEDAE179C18FA6CD06E60E /* BaseRenderer.h */,
+				AAAEDF23FC6AD9D646F9F01E /* OculusRenderer.cpp */,
+				AAAED25C3F3CF72AB3A20FDE /* OculusRenderer.h */,
+				AAAEDD9F6149125E907464EB /* Scene.cpp */,
+				AAAED48CF955AC1F88EB5BAE /* Scene.h */,
+				AAAED783B0FB31DADAD679CC /* SceneObject.cpp */,
+				AAAEDBCD0B115A53009F1399 /* SceneObject.h */,
+				AAAEDEFF009AE2864EB89D37 /* Camera.cpp */,
+				AAAED3B28E9C7E26426E9839 /* Camera.h */,
+				AAAEDD84A787024B8A5B41EC /* RenderProgram.cpp */,
+				AAAED42187C1068260B58E6D /* RenderProgram.h */,
+				AAAED544D20FEC97C16D2101 /* SceneEngine.cpp */,
+				AAAED946A37BF88402F157A5 /* SceneEngine.h */,
+				AAAED32361CCF58E52BB52F7 /* WebCam.h */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
 		BED24ADA19050CD70009D365 = {
 			isa = PBXGroup;
 			children = (
 				BED24B101905186B0009D365 /* resources */,
 				BED24AEF19050F810009D365 /* Frameworks */,
-				BED24AE519050CD70009D365 /* OculusCam */,
 				BED24AE419050CD70009D365 /* Products */,
+				AAAED1175374FF49D5AE0D8F /* OculusCam */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,22 +153,6 @@
 				BED24AE319050CD70009D365 /* OculusCam */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BED24AE519050CD70009D365 /* OculusCam */ = {
-			isa = PBXGroup;
-			children = (
-				BED24AE619050CD70009D365 /* main.cpp */,
-				AAAED2B0C2A80172E3FF105D /* AppHelper.h */,
-				AAAEDD4215C5CAAD6F4403F1 /* OculusApp.cpp */,
-				AAAEDF0794B0983C62B03722 /* OculusApp.h */,
-				AAAED3BAB6D8117682032DF8 /* OculusAppBase.cpp */,
-				AAAED370D35C19B92A401491 /* OculusAppBase.h */,
-				AAAEDBBCF8715FFCE130F38E /* OpenGLApp.cpp */,
-				AAAED1C5EE4BC5551576F6ED /* OpenGLApp.h */,
-				AAAED5F38B8754CE489047D7 /* WebCam.h */,
-			);
-			path = OculusCam;
 			sourceTree = "<group>";
 		};
 		BED24AEF19050F810009D365 /* Frameworks */ = {
@@ -184,10 +235,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED24AE719050CD70009D365 /* main.cpp in Sources */,
-				AAAED94F310FB77A440797B7 /* OculusApp.cpp in Sources */,
-				AAAED308F66E26ED5D9E8E52 /* OculusAppBase.cpp in Sources */,
-				AAAEDAE2CF1ABCDA30F33AA6 /* OpenGLApp.cpp in Sources */,
+				AAAEDD8C2E7F0A8772157536 /* main.cpp in Sources */,
+				AAAEDF1D9016C73E0E5C1AF8 /* BaseRenderer.cpp in Sources */,
+				AAAEDF76665ECB809BD9F7FB /* OculusRenderer.cpp in Sources */,
+				AAAED6BF4E042E4B240E22E2 /* Scene.cpp in Sources */,
+				AAAEDFAF04EA3D3334DBDB2D /* SceneObject.cpp in Sources */,
+				AAAEDCE23B3BCD54C6A7AE06 /* Camera.cpp in Sources */,
+				AAAED211179631B98B719EC6 /* RenderProgram.cpp in Sources */,
+				AAAED77ECC8846DEE633D6B5 /* SceneEngine.cpp in Sources */,
+				AAAEDC814B05AB08BF12EF1D /* CubesApp.cpp in Sources */,
+				AAAED733771827BC6A55B235 /* CubesSceneEngine.cpp in Sources */,
+				AAAED7D56EF284B3B66A4527 /* OpenGLApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
